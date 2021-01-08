@@ -20,8 +20,6 @@ def add_seen_card(reviewer, card, ease):
 
     card_history.append(card)
 
-    showInfo(str(len(card_history)))
-
 gui_hooks.reviewer_did_answer_card.append(add_seen_card)
 
 def clear_card_history():
@@ -30,6 +28,5 @@ def clear_card_history():
     """
 
     card_history.clear()
-    showInfo(str(len(card_history)))
 
 gui_hooks.reviewer_will_end.append(clear_card_history)
